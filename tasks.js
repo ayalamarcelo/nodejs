@@ -13,12 +13,11 @@ function vaciarLista() {
 }
 
 function eliminarUltimaTarea() {
-  // eliminar la ultima tarea
+  tareas.pop();
 }
 
 function eliminarTareaEspecifica() {
-  // eliminar una tarea especifica usando el indice
+  tareas.splice(1);
 }
 
-
-module.exports = { mostrarTareas, agregarTarea, vaciarLista };
+module.exports = { mostrarTareas, agregarTarea, vaciarLista, eliminarUltimaTarea, eliminarTareaEspecifica };
