@@ -16,8 +16,10 @@ function eliminarUltimaTarea() {
   tareas.pop();
 }
 
-function eliminarTareaEspecifica() {
-  tareas.splice(1);
+function eliminarTareaEspecifica(indice) {
+  if (indice >= 0 && indice < tareas.length) {
+    tareas.splice(indice, 1);
+  }
 }
 
 module.exports = { mostrarTareas, agregarTarea, vaciarLista, eliminarUltimaTarea, eliminarTareaEspecifica };
